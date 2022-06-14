@@ -1,0 +1,9 @@
+<h1>Sign up</h1>
+<%= simple_form_for @user do |f| %>
+  <%= f.input :name %>
+  <%= f.input :username %>
+  <%= f.input :email %>
+  <%= f.input :password %> <!--we get this for free because we added has_secure_password to the User model, however we do need to add the password_digest field when generating our User model.-->
+  <%= f.input :password_confirmation %> <!--we get this for free because we added has_secure_password to the User model, however we do need to add the password_digest field when generating our User model.-->
+  <%= f.button :submit, "Sign up" %>
+<% end %>
