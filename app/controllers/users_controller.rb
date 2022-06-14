@@ -7,6 +7,12 @@ class UsersController < ApplicationController
     @user = User.new(form_params)
     # check if user can save
     if @user.save
+      # after we save a user, let's keep hold of that user.
+      session[:user_id] = @user.id
+
+      # let the user know they've signed up.
+      flash[:success] = 'Welcome to Source!'
+
       redirect_to root_path
     else
       # render the new action (the view new.html.erb) again
