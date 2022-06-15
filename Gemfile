@@ -25,6 +25,10 @@ gem 'bcrypt', '~> 3.1.7'
 # add in simple form
 gem 'simple_form'
 
+# add in our admin panel
+gem 'devise'
+gem 'activeadmin'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
