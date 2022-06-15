@@ -29,6 +29,11 @@ gem 'simple_form'
 gem 'devise'
 gem 'activeadmin'
 
+# add in our image upload
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
