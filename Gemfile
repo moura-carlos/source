@@ -5,13 +5,9 @@ ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6'
-# Use sqlite3 as the database for Active Record
-group :development do
-  gem 'sqlite3', '~> 1.4'
-end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '1.2.3'
 end
 
 # Use Puma as the app server
@@ -51,6 +47,8 @@ gem "down", "~> 5.0"
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
