@@ -1,1 +1,9 @@
-<%= link_to "Download", controller: 'items', action: 'download', id: @item  %>
+<h1>
+  <%= @item.title %>
+</h1>
+
+<%= image_tag(@item.image.medium.url) %>
+
+<p>
+  <%= link_to "Download", controller: 'items', action: 'download', id: @item  %>
+</p>
