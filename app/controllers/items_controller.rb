@@ -22,7 +22,6 @@ class ItemsController < ApplicationController
     require "down"
     tempfile = Down.download(@item.image.url)
     send_file tempfile.path, type: tempfile.content_type, disposition: 'attachment', filename: tempfile.original_filename
-
     # require 'open-uri'
     # url = @item.image.url
     # data = open(url).read
