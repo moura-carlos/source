@@ -106,6 +106,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    down (5.3.1)
+      addressable (~> 2.8)
     erubi (1.10.0)
     excon (0.92.3)
     ffi (1.15.5)
@@ -308,6 +310,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   carrierwave
   devise
+  down (~> 5.0)
   fog-aws
   jbuilder (~> 2.7)
   listen (~> 3.3)

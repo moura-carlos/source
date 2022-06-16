@@ -34,6 +34,9 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 
+# image download
+gem "down", "~> 5.0"
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
