@@ -1,8 +1,18 @@
 <div class="title">
   <h1>Photos</h1>
 </div>
+
+<%# search form %>
+<form action="">
+  <input type="text" name="q" value="<%=params[:q]%>">
+</form>
+
+
 <div class="items-grid">
   <%= render partial: "item", collection: @items %>
+  <% if @items.size == 0 && params[:q].present? %>
+    <p>Nothing here, try searching something else!</p>
+  <% end %>
 </div>
 <!--<p>
   <%# @items.each do |item| %>
