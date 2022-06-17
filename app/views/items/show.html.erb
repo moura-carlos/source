@@ -1,9 +1,11 @@
-<h1>
-  <%= @item.title %>
-</h1>
+<div class="item-page">
+  <h1>
+    <%= @item.title %>
+  </h1>
 
-<%= image_tag(@item.image.medium.url) %>
+  <%= image_tag(@item.image.medium.url) %>
 
-<p>
-  <%= link_to "Download", controller: 'items', action: 'download', id: @item  %>
-</p>
+  <p>
+    <%= link_to "Download", controller: 'items', action: 'download', id: @item  %>
+  </p>
+</div>
