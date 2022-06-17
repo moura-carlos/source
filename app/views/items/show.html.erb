@@ -3,6 +3,17 @@
     <%= @item.title %>
   </h1>
 
+  <!--using the items helper we created in items_helper.rb -->
+  <p>
+    <strong><%= 'Category'.pluralize(@item.categories.count) %>:</strong>
+    <%= format_categories @item.categories %>
+  </p>
+
+  <%#= render partial: "category", collection: @item.categories %> <%#=the name of the partial has to be singular%>
+
+  <%= simple_format @item.description %>
+
+
   <%= image_tag(@item.image.medium.url) %>
 
   <p>
