@@ -139,6 +139,7 @@ div.items-grid {
     border-bottom: none;
     color: $darkgrey;
     padding: 1em;
+    margin-top: 6px;
     font-size: 14px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -177,4 +178,10 @@ div.title {
     border-color: $blue;
     outline: none;
   }
+}
+#content {
+  margin: 35px;
+}
+#sign-up-button {
+  margin-top: 1rem;
 }

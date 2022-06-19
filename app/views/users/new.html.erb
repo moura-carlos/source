@@ -5,5 +5,34 @@
   <%= f.input :email %>
   <%= f.input :password %> <!--we get this for free because we added has_secure_password to the User model, however we do need to add the password_digest field when generating our User model.-->
   <%= f.input :password_confirmation %> <!--we get this for free because we added has_secure_password to the User model, however we do need to add the password_digest field when generating our User model.-->
-  <%= f.button :submit, "Sign up" %>
+  <%= f.input :subscription_plan, as: :select, collection: [['Basic subscription - $9.99/month', 'basic'], ['Pro subscription - $19.99/month', 'pro']], include_blank: false %> <%#= it will pass to the database the lowercase version and show the user the upcase one%>
+
+  <div id="card-errors">
+      <% @user.errors[:stripe_token].each do |error| %>
+        <%= error %>
+      <% end %>
+  </div>
+  <div id="card"></div>
+
+  <%= f.button :submit, "Sign up", id: 'sign-up-button' %>
 <% end %>
+
+<script>
+  var stripe = Stripe("<%=Rails.application.credentials[Rails.env.to_sym][:stripe_publishable_key]%>");
+  var elements = stripe.elements();
+
+  var card = elements.create('card');
+  card.mount('#card')
+
+  $("form#new_user").on("submit", function (ev) {
+    ev.preventDefault()
+    stripe.createToken(card).then(function (result){
+      if (result.error) {
+        $("#card-errors").html(result.error.message)
+      } else {
+        $("form#new_user").append("<input type='hidden' name='user[stripe_token]' value='"+ result.token.id +"'>")
+        $("form#new_user").get(0).submit()
+      }
+    })
+  })
+</script>

@@ -40,6 +40,9 @@ gem 'fog-aws'
 # image download
 gem "down", "~> 5.0"
 
+# stripe payments
+gem 'stripe', '~> 6.4'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
