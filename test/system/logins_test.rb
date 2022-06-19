@@ -16,7 +16,7 @@ class LoginsTest < ApplicationSystemTestCase
     visit new_session_path
 
     fill_in "Username", with: "carlosexample1"
-    fill_in "Password", with: "password123"
+    fill_in "Password", with: "password"
 
     click_button "Log in"
 
