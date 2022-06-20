@@ -14,5 +14,25 @@ ActiveAdmin.register User do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+  index do
+    selectable_column
+    column :id
+    column :name
+    column :username
+    column :email
+    column :subscription_plan
+    column :is_subscription_active
+    actions
+  end
 
+  form do |f|
+    inputs 'Personal Information' do
+      input :name
+      input :username
+      input :email
+    end
+    # f.inputs          # builds an input field for every attribute
+    # f.actions         # adds the 'Submit' and 'Cancel' buttons
+    actions
+  end
 end
