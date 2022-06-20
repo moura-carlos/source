@@ -14,7 +14,7 @@
 ## General info
 ### Source.
 Nearly full-featured image stock e-commerce web application built with *Ruby on Rails.*
-This app is the result of a  Ruby on Rails course found at [SuperHi](superhi.com).
+This app is the result of a  Ruby on Rails course found at [SuperHi](https://www.superhi.com/courses/ruby-on-rails).
 ***
 ## Technologies
 The project is created with/makes use of:
@@ -166,6 +166,7 @@ If you want to be able to **store your image files using amazon AWS S3**:
     > Card number: 4242 4242 4242 4242
      MM/YY: 04/24
      CVC: 424
+     ZIP: 42424
 ## On production
 Make sure you set your Rails Master Key value for Heroku so that it knows how to read your encrypted API keys.
 * Your master key value can be found in ```app/config/master.key```
