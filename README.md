@@ -139,7 +139,7 @@ If you want to be able to **store your image files using amazon AWS S3**:
 * As a User with an active Stripe subscription plan, I can
 	* Download images
   * Change my subscription (from Pro to Basic or from Basic to Pro)
-	* Cancel my subscription (when that happens the User credentials are also deleted an the User no longer has access to the website).
+	* Delete my account (when that happens the User's premium subscription is automatically cancelled on Stripe and the User's information is deleted from the database).
 ---
 ## Admin dashboard
 * To access the admin dashboard you have to type ```/admin``` after the website full domain, for example, **https://example.com/admin**.
