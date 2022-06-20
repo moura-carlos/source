@@ -185,3 +185,18 @@ div.title {
 #sign-up-button {
   margin-top: 1rem;
 }
+
+footer {
+  text-align: center;
+  // padding: 1px;
+  color: white;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  padding: 10px 10px 0px 10px;
+  width: 100%;
+  /* Height of the footer*/
+  height: 30px;
+  background: $black;
+}
