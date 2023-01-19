@@ -6,4 +6,6 @@ CarrierWave.configure do |config|
     region: 'us-west-2'
   }
   config.fog_directory = Rails.application.credentials[Rails.env.to_sym][:aws_bucket] # required
+  config.cache_dir     = "#{Rails.root}/tmp/uploads"
+  config.storage       = :fog
 end
