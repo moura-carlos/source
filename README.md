@@ -2,6 +2,7 @@
 ---
 ## Table of contents
 * [General info](#general-info)
+* [Video - Testing the website](#video---testing-the-website)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
@@ -16,6 +17,13 @@
 Nearly full-featured image stock e-commerce web application built with *Ruby on Rails.*
 This app is the result of a  Ruby on Rails course found at [SuperHi](https://www.superhi.com/courses/ruby-on-rails).
 ***
+## [Video](https://www.loom.com/share/90a98a15b0264b479ac8660f6714062c) - Testing the website
+
+
+https://user-images.githubusercontent.com/97359453/213890462-ae14feff-e705-4b73-a0b6-39569436467b.mp4
+
+
+---
 ## Technologies
 The project is created with/makes use of:
 * Bundler version 2.3.5
@@ -161,7 +169,7 @@ If you want to be able to **store your image files using amazon AWS S3**:
 * This project is complete, but I am still planning to improve its front end.
 ***
 ## Testing the deployed application
-* Go to the website: [Source test website](https://carlos-source-staging.herokuapp.com/)
+* Go to the website: [Source test website](https://murmuring-thicket-97756.herokuapp.com/)
 * To "subscribe" and be able to download images,  you can use the following test information:
     > Card number: 4242 4242 4242 4242
      MM/YY: 04/24
